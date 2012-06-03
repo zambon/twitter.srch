@@ -1,0 +1,29 @@
+#forms
+  #simple_form
+    = form_for(@query, url: tweets_search_path, remote: true, id: :simple) do |f|
+      = f.text_field :q, size: 40
+      = f.submit 'srch!'
+      = image_tag 'ajax-loader.gif', alt: 'Spinner', class: :spinner
+
+      .clear
+
+  #advanced_form
+    = form_for(@query, url: tweets_search_path, remote: true, id: :advanced) do |f|
+      = f.label :from_user, 'from'
+      = f.text_field :from_user, class: :r_round, size: 31
+      .clear
+  
+      = f.label :q, 'text'
+      = f.text_field :q, size: 31
+      = f.submit 'srch!'
+      = image_tag 'ajax-loader.gif', alt: 'Spinner', class: :spinner
+      .clear
+  
+      = f.label :language, 'language'
+      = f.select :language, twitter_languages
+      .clear
+
+= link_to 'advanced', '#', id: :toggle_forms_button, class: :button
+= link_to 'clear', '#', id: :clear_form_button, class: :button
+
+.clear

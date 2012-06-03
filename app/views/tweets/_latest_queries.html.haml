@@ -1,0 +1,38 @@
+%ul.queries
+  - if @queries.blank?
+    .notice
+      %strong no queries!
+  - else
+    - @queries.each do |query|
+      %li
+        .query_info
+          - unless query.from_user.blank?
+            %p
+              %strong from
+            %p.from_user= query.from_user
+            .clear
+          
+          - unless query.q.blank?
+            %p
+              %strong text
+            %p.text= query.q
+            .clear
+          
+          - unless query.language.blank?
+            %p
+              %strong lang
+            %p.language= query.language
+            .clear
+          
+          .clear
+        
+        .query_srch
+          %strong srch!
+        
+        .clear
+    %li
+
+= form_tag tweets_search_path, remote: true, id: :latest do
+  = hidden_field_tag 'query[q]', nil, id: :latest_query_q
+  = hidden_field_tag 'query[from_user]', nil, id: :latest_query_from_user
+  = hidden_field_tag 'query[language]', nil, id: :latest_query_language

@@ -1,0 +1,22 @@
+#wrap
+  #wrap_header
+    = link_to image_tag('twitter-srch.png', border: 0), root_path, id: :twitter_srch_logo
+  
+  #wrap_content
+    #search
+      = render 'search'
+    
+    #results
+  
+  #wrap_footer
+
+#sidebar
+  #sidebar_header
+  
+  #sidebar_content
+    %h2 latest queries
+    #latest_queries= render 'latest_queries'
+          
+  #sidebar_footer
+
+.clear

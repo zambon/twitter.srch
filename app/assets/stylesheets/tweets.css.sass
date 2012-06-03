@@ -1,0 +1,241 @@
+// Place all the styles related to the Tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// -------- RESET --------
+
+*
+  padding: 0
+  margin: 0
+  font-family: Helvetica
+
+// -------- MAIN WRAP --------
+
+#wrap
+  float: left
+  width: 650px
+
+  #wrap_header
+    width: 650px
+    height: 300px
+    background: transparent url(cloud-top.png) no-repeat
+
+  #wrap_content
+    width: 590px
+    padding-left: 30px
+    padding-right: 30px
+    background: transparent url(cloud-repeat.png) repeat-y
+
+  #wrap_footer
+    width: 650px
+    height: 82px
+    background: transparent url(cloud-bottom.png) no-repeat    
+
+#twitter_srch_logo
+  float: left
+  margin-left: 62px
+  margin-top: 54px
+
+#forms
+  float: left
+  width: 490px
+
+.tweets li
+  overflow: hidden
+  width: 500px
+  padding: 10px
+  border-top: 1px dashed #badbee
+  margin-left: auto
+  margin-right: auto
+
+  &.first
+    border-top: 0
+
+  .picture
+    float: left
+    width: 50px
+    height: 50px
+    padding: 5px
+
+  .text
+    float: right
+    width: 420px
+    padding: 5px
+
+    a
+      text-decoration: none
+      color: #badbee
+
+    a.user
+      text-decoration: none
+      font-size: 110%
+      color: #badbee
+
+    a:hover
+      text-decoration: underline
+
+  .timestamp
+    text-align: right
+    font-size: 70%
+    color: #bbb
+
+.no_results
+  text-align: center
+  color: red
+  font-weight: bold
+  padding: 15px
+
+// -------- SIDEBAR --------
+
+#sidebar
+  float: right
+  width: 266px
+
+  #sidebar_header
+    width: 266px
+    height: 294px
+    background: transparent url(sidebar-top.png) no-repeat
+
+  #sidebar_content
+    width: 206px
+    padding-left: 30px
+    padding-right: 30px
+    background: transparent url(sidebar-repeat.png) repeat-y
+
+    h2
+      text-align: right
+      font-weight: normal
+      font-size: 100%
+      font-weight: bold
+
+  #sidebar_footer
+    width: 266px
+    height: 81px
+    background: transparent url(sidebar-bottom.png) no-repeat
+
+.queries li
+  border-top: 1px dashed #badbee
+  padding-top: 5px
+  padding-bottom: 5px
+  overflow: hidden
+  
+  &:hover
+    cursor: pointer
+  
+  .query_info
+    float: left
+    width: 80%
+    
+    p
+      float: left
+      padding-left: 5px
+  
+  .query_srch
+    float: right
+    width: 19%
+    color: #1fa
+  
+
+// -------- ELEMENTS --------
+
+body
+  width: 960px
+  margin-left: auto
+  margin-right: auto
+  background: url(bg-page.png) repeat-x scroll 0 0 #deefff
+
+label
+  float: left
+  margin-right: 20px
+  text-align: right
+  width: 70px
+  font-size: 14px
+  margin-top: 10px
+
+input[type=text]
+  @extend .l_round
+  float: left
+  border: 1px solid #ddd
+  padding: 10px
+  height: 18px
+  background: transparent url(field-bg.png) repeat-x
+  margin-bottom: 10px
+  font-size: 100%
+
+input[type=submit]
+  @extend .r_round
+  font-size: 100%
+  float: left
+  border-top: 1px solid #ddd
+  border-right: 1px solid #ddd
+  border-bottom: 1px solid #ddd
+  border-left: 0
+  padding: 9px
+  height: 40px
+  background: transparent url(srch-bg.png) repeat-x
+  font-weight: bold
+
+  &:hover
+    background: #fff
+    color: #ffaa11
+    cursor: pointer
+
+select
+  @extend .l_round
+  @extend .r_round
+  border: 1px solid #ddd
+  padding: 10px
+  margin-bottom: 10px
+  width: 302px
+  height: 42px
+  background: transparent url(field-bg.png) repeat-x
+
+ul
+  list-style: none
+
+li:hover  
+  background-color: #f7f7f7
+
+// --------  --------
+
+.spinner
+  float: left
+
+.button
+  @extend .l_round
+  @extend .r_round
+  float: right
+  text-decoration: none
+  font-weight: bold
+  border: 1px solid #ddd
+  padding: 10px
+  background: #badbee
+  margin-bottom: 10px
+  
+  &:hover
+    background: #fff
+    color: #badbee
+
+.l_round
+  -moz-border-radius-topleft: 10px
+  -moz-border-radius-bottomleft: 10px
+  -webkit-border-top-left-radius: 10px
+  -webkit-border-bottom-left-radius: 10px
+
+.r_round
+  -moz-border-radius-topright: 10px
+  -moz-border-radius-bottomright: 10px
+  -webkit-border-top-right-radius: 10px
+  -webkit-border-bottom-right-radius: 10px
+
+.notice
+  width: 100%
+  text-align: center
+  padding: 10px
+  color: green
+  font-size: 100%
+
+// -------- UTILS --------
+
+.clear
+  clear: both

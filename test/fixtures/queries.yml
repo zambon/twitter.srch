@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  from_user: MyString
+  language: MyString
+  q: MyString
+
+two:
+  from_user: MyString
+  language: MyString
+  q: MyString
+# == Schema Information
+#
+# Table name: queries
+#
+#  id         :integer         not null, primary key
+#  from_user  :string(255)
+#  language   :string(255)
+#  q          :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

@@ -1,0 +1,4 @@
+$('#results').html("<%= escape_javascript render('tweets')%>");
+$('#latest_queries').html("<%= escape_javascript render('latest_queries')%>");
+$('.spinner').hide();
+setup_latest_queries_elements();
