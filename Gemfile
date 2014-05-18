@@ -1,48 +1,34 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'rails', '3.2.5'
+ruby "2.0.0"
 
-gem 'sqlite3'
-gem 'haml'
-gem 'json'
-gem 'twitter'
-gem 'jquery-rails'
+gem "rails",          "~> 3.2.18"
 
+gem "sqlite3",        "~> 1.3.9"
+gem "haml",           "~> 4.0.5"
+gem "json",           "~> 1.8.1"
+gem "twitter",        "~> 5.9.0"
+gem "jquery-rails",   "~> 3.1.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem "sass-rails",   "~> 3.2.3"
+  gem "coffee-rails", "~> 3.2.1"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  # gem "therubyracer", :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem "uglifier",     ">= 1.0.3"
 end
 
 group :development do
-  gem 'unicorn'
-  gem 'annotate', '~> 2.4.1.beta'
+  gem "unicorn",      "~> 4.8.3"
+  gem "annotate",     "~> 2.6.3"
 
-  gem 'rspec-rails'
+  gem "rspec-rails"
   if RUBY_PLATFORM =~ /darwin/
-    gem 'rb-fsevent'
-    gem 'growl'
+    gem "rb-fsevent", "~> 0.9.4"
+    gem "growl",      "~> 1.0.3"
   end
 end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

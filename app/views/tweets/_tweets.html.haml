@@ -4,18 +4,17 @@
 - else
   %ul.tweets
     - @tweets.each_with_index do |tweet, index|
-      %li{ class: index==0 ? :first : '' }
+      %li{ class: index==0 ? :first : "" }
         .picture
-          = link_to image_tag(tweet.profile_image_url, border: 0, size: '50x50'), parse_tweet_user(tweet.from_user)
-    
+          = link_to image_tag(tweet.profile_image_url, border: 0, size: "50x50"), parse_tweet_user(tweet)
+
         .text
           %span
-            = link_to tweet.from_user, parse_tweet_user(tweet.from_user), class: :user
+            = link_to tweet.from_user, parse_tweet_user(tweet), class: :user
           %span
-            = raw(parse_tweet_text(tweet.text))
-      
+            = raw parse_tweet_text(tweet)
         .clear
-      
+
         .timestamp
-          %span{ title: tweet.created_at.to_date.strftime('%A, %B %e, %Y at %I:%M%P') }
-            = "#{time_ago_in_words(tweet.created_at)} ago"
+          %span{ title: tweet.created_at.to_date.strftime("%A, %B %e, %Y at %I:%M%P") }
+            #{time_ago_in_words(tweet.created_at)} ago
